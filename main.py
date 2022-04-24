@@ -156,3 +156,9 @@ class Types:
             pi = self.partition(array, low, high)
             self.quickSort(array, low, pi - 1)
             self.quickSort(array, pi + 1, high)
+
+    # Заполнение массива случайными числами заданного диапазона
+    def randomPack(self, d1, d2, l):
+        self.i = 0
+        a = [random.randint(d1, d2) for self.i in range(l)]
+        return a
