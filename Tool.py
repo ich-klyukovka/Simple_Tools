@@ -174,3 +174,17 @@ def takeColumn(matrix, n):
 # Поварачивает матрицу на 90 градусов
 def rotate(matrix):
     return tuple(zip(*matrix[::-1]))
+
+
+def writeArray(name):  # Запись файла по столбцам в массив
+    a = []
+    for s in open(name):
+        a.append(s)
+    return [line.rstrip() for line in a]
+
+
+def writeFile(name, a):  # Запись в файл массив
+    with open(name, 'w+') as f:
+        for item in a:
+            # f.write("%s\n" % item)
+            f.write(str(item) + ' ')

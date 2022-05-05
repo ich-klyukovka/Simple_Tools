@@ -34,3 +34,8 @@ print(tool.takeColumn(matrix, 4))  # Взятый 4-й стролбец матр
 print()
 tool.rotate(matrix)  # Поворот матрицы на 90 градусов
 tool.show(matrix)  # Вывод матрицы
+
+print()
+array = tool.writeArray("file.txt")  # Запись файла в массив по столбцам
+print(array)
+tool.writeFile("file2.txt", array)  # Запись массива в файл
