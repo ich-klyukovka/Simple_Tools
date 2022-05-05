@@ -1,4 +1,4 @@
-import TestVersion as tool
+import Tool as tool
 
 array = tool.randomPack(0, 100, 10)  # Функция заполнения массива, где
 # (минимальное число в массиве, максимальное число, количество чисел)
