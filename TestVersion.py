@@ -134,7 +134,7 @@ def quickSort(TakenArray):
         q2(TakenArray, pi + 1, high)
 
 
-def q2(TakenArray, low, high):
+def q2(TakenArray, low, high):  # Кусочек быстрой сортировки
     if low < high:
         pi = partition(TakenArray, low, high)
         q2(TakenArray, low, pi - 1)
@@ -147,6 +147,7 @@ def randomPack(d1, d2, quantity):
     return a
 
 
+# Вывод матрицы
 def show(matrix):
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
@@ -154,18 +155,22 @@ def show(matrix):
         print()
 
 
+# Заполнение массива случайными числами заданного диапазона и указанным размером матрицы
 def randomDoublePack(d1, d2, quantity, quantity1):
     a = [[random.randint(d1, d2) for j in range(quantity1)] for i in range(quantity)]
     return a
 
 
+# Меняет местами строчки матрицы
 def swipeStr(matrix, n, m):
     matrix[n], matrix[m] = matrix[m], matrix[n]
 
 
+# Возвращает столбец из матрицы
 def takeColumn(matrix, n):
     return [row[n] for row in matrix]
 
 
+# Поварачивает матрицу на 90 градусов
 def rotate(matrix):
     return tuple(zip(*matrix[::-1]))
